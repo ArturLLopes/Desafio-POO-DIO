@@ -1,4 +1,4 @@
-package com.projeto.poo.iPhone;
+package com.projeto.poo.iPhone.interfaces;
 
 public interface IPhoneInterface {
     public interface ReprodutorMusical {

@@ -1,8 +1,8 @@
 package com.projeto.poo.iPhone;
 
-import com.projeto.poo.iPhone.IPhoneInterface.ReprodutorMusical;
+import com.projeto.poo.iPhone.interfaces.IPhoneInterface.ReprodutorMusical;
 
-import static com.projeto.poo.iPhone.IPhoneInterface.*;
+import static com.projeto.poo.iPhone.interfaces.IPhoneInterface.*;
 
 public class IPhone implements ReprodutorMusical, AparelhoTelefonico, NavegadorInternet {
     @Override
