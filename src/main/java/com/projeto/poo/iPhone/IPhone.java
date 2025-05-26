@@ -5,6 +5,9 @@ import com.projeto.poo.iPhone.interfaces.IPhoneInterface.ReprodutorMusical;
 import static com.projeto.poo.iPhone.interfaces.IPhoneInterface.*;
 
 public class IPhone implements ReprodutorMusical, AparelhoTelefonico, NavegadorInternet {
+
+    private String musicaSelecionada;
+
     @Override
     public void ligar(String numero) {
         System.out.println("Ligando para: " + numero);
@@ -37,7 +40,11 @@ public class IPhone implements ReprodutorMusical, AparelhoTelefonico, NavegadorI
 
     @Override
     public void tocar() {
-        System.out.println("Tocando música...");
+        if (musicaSelecionada == null || musicaSelecionada.isEmpty()) {
+            System.out.println("Nenhuma música selecionada. Selecione uma música antes de tocar.");
+        } else {
+            System.out.println("Tocando: " + musicaSelecionada);
+        }
     }
 
     @Override
@@ -47,6 +54,7 @@ public class IPhone implements ReprodutorMusical, AparelhoTelefonico, NavegadorI
 
     @Override
     public void selecionarMusica(String musica) {
+        this.musicaSelecionada = musica;
         System.out.println("Selecionando a música: " + musica);
     }
 }

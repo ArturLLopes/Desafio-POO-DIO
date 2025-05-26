@@ -21,8 +21,12 @@ public class MenuChamadas {
             switch (opcao) {
                 case 1 -> {
                     System.out.print("Digite o número para ligar: ");
-                    String numero = scanner.nextLine();
-                    iphone.ligar(numero);
+                    String numero = scanner.nextLine().trim();
+                    if (numero.isEmpty()) {
+                        System.out.println("Número não pode ser vazio!");
+                    } else {
+                        iphone.ligar(numero);
+                    }
                 }
                 case 2 -> iphone.atender();
                 case 3 -> iphone.iniciarCorreioVoz();

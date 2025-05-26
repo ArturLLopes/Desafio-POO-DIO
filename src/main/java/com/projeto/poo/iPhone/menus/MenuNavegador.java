@@ -21,8 +21,12 @@ public class MenuNavegador {
             switch (opcao) {
                 case 1 -> {
                     System.out.print("Digite a URL: ");
-                    String url = scanner.nextLine();
-                    iphone.exibirPagina(url);
+                    String url = scanner.nextLine().trim();
+                    if (url.isEmpty()) {
+                        System.out.println("A URL não pode ser vazia!");
+                    } else {
+                        iphone.exibirPagina(url);
+                    }
                 }
                 case 2 -> iphone.adicionarNovaAba();
                 case 3 -> iphone.atualizarPagina();
